@@ -1,37 +1,40 @@
-// Welcome dynamic name
-let name = "Jatiro";
-document.getElementById("name").innerText = name;
+document.addEventListener("DOMContentLoaded", function() {
+    // Welcome dynamic name
+    let username = "Jatiro";
+    document.getElementById("username").innerText = username;
 
-// Form Validation
-document.getElementById("messageForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+    // Form Validation
+    document.getElementById("messageForm").addEventListener("submit", function(event) {
+        event.preventDefault();
 
-    let userName = document.getElementById("name").innerText;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-    let message = document.getElementById("messageInput").value;
+        let Name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let phone = document.getElementById("phone").value;
+        let message = document.getElementById("messageInput").value;
 
-    if (userName === "" || email === "" || phone === "" || message === "") {
-        alert("All fields must be filled!");
+        if (Name === "" || email === "" || phone === "" || message === "") {
+            alert("All fields must be filled!");
+            return;
+        }
+        
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address!");
+            return;
+        }
+
+        let phonePattern = /^\d+$/;
+        if (!phonePattern.test(phone)) {
+        alert("Phone must contain digits only!");
         return;
-    }
+        }
 
-    if (!email.includes("@")) {
-        alert("Email must contain '@'");
-        return;
-    }
+        let resultText =
+        "Name: " + Name + "<br>" +
+        "Email: " + email + "<br>" +
+        "Phone: " + phone + "<br>" +
+        "Message: " + message;
 
-    if (isNaN(phone)) {
-        alert("Phone must be numeric!");
-        return;
-    }
-
-    let resultText = `
-        Name: ${userName} <br>
-        Email: ${email} <br>
-        Phone: ${phone} <br>
-        Message: ${message}
-    `;
-
-    document.getElementById("result").innerHTML = resultText;
+        document.getElementById("result").innerHTML = resultText;
+    });
 });

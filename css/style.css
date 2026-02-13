@@ -61,12 +61,15 @@ nav a:hover {
 
 .banner-placeholder {
     margin-top: 20px;
-    background: #ddd;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #666;
+    width: 100%;
+    max-width: 1366px;
+    height: auto;
+}
+
+.banner-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .section {
