@@ -1,14 +1,12 @@
 // Welcome dynamic name
 let name = "Jatiro";
-document.getElementById("welcomeText").innerText =
-    "Hi " + name + ", Welcome to Jetzkky Global Corporation";
-
+document.getElementById("name").innerText = name;
 
 // Form Validation
 document.getElementById("messageForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    let userName = document.getElementById("name").value;
+    let userName = document.getElementById("name").innerText;
     let email = document.getElementById("email").value;
     let phone = document.getElementById("phone").value;
     let message = document.getElementById("messageInput").value;
