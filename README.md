@@ -1,6 +1,7 @@
-# CodingCamp-090226-jatiro
+# CodingCamp-09Feb26-jatiro
 Mini Coding Project for RevoU Coding Camp
-# Jetzkky Global Corporation
+
+## Jetzkky Global Corporation
 
 A responsive company profile website developed as part of the Mini Coding Camp project.
 
@@ -38,13 +39,15 @@ This website demonstrates fundamental front-end development skills including HTM
 
 ## 📂 Project Structure
 
-CodingCamp-090226-jatiro
+```bash
+CodingCamp-090226-jatiro/
 │
 ├── index.html
 ├── css/
-│ └── style.css
+│   └── style.css
 └── js/
-│ └── script.js
+    └── script.js
+```
 
 ---
 
